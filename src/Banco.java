@@ -121,7 +121,12 @@ public class Banco {
     }    
 
     public void logout() {
-        usuarioLogado = null;
-        System.out.println("Logout realizado com sucesso!");
+        if (usuarioLogado != null) {
+            usuarioLogado = null;
+            System.out.println("Logout realizado com sucesso!");
+        }
+        else{
+            System.out.println("Nenhum usuário logado!");
+        }
     }
 }
